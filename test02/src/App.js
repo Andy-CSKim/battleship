@@ -10,9 +10,17 @@ function App() {
   const currentSquares = history[currentMove];
 
   function handlePlay(nextSquares) {
-    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];    
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
+ 
+    console.log('b-nextHistory', history);
+    console.log('b-currentMove', currentMove);
+
+    console.log('nextHistory', nextHistory);
+    console.log('currentMove', nextHistory.length - 1);
+
   }
 
   return (
